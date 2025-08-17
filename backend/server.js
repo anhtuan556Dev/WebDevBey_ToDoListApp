@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import todoRoute from "./routes/todo.route.js";
 import path from "path";
+import cors from "cors";
 
 // Tải các biến môi trường từ file .env
 dotenv.config();
@@ -16,6 +17,7 @@ const __dirname = path.resolve();
 
 // Định nghĩa một route cho trang chủ
 app.use(express.json());
+// app.use(cors());
 
 app.use("/api/todos", todoRoute);
 
