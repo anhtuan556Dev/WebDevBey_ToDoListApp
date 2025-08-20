@@ -1,15 +1,15 @@
-# MERN Stack Todo List Application
+# Ứng dụng Danh sách Công việc MERN Stack
 
-A full-stack todo list application built with MongoDB, Express.js, React, and Node.js (MERN Stack) with Material-UI components.
+Một ứng dụng danh sách công việc full-stack được xây dựng bằng MongoDB, Express.js, React và Node.js (MERN Stack) với các thành phần Material-UI.
 
-## Features
+## Tính năng
 
-- ✅ Create, read, update, and delete todos
-- ✅ Mark todos as complete/incomplete
-- ✅ Edit todos inline
-- ✅ Responsive design with Material-UI
-- ✅ Real-time data persistence with MongoDB
-- ✅ Production-ready deployment
+- ✅ Tạo, đọc, cập nhật và xóa công việc
+- ✅ Đánh dấu công việc là đã hoàn thành/chưa hoàn thành
+- ✅ Chỉnh sửa công việc nội tuyến
+- ✅ Thiết kế đáp ứng với Material-UI
+- ✅ Lưu trữ dữ liệu thời gian thực với MongoDB
+- ✅ Sẵn sàng triển khai cho môi trường sản xuất
 
 ## Tech Stack
 
@@ -17,17 +17,17 @@ A full-stack todo list application built with MongoDB, Express.js, React, and No
 
 - React 19
 - Material-UI (MUI)
-- Axios for API calls
-- Vite for build tooling
+- Axios cho các lệnh gọi API
+- Vite cho công cụ xây dựng
 
 **Backend:**
 
 - Node.js
 - Express.js
-- MongoDB with Mongoose
-- CORS enabled
+- MongoDB với Mongoose
+- Đã bật CORS
 
-## Project Structure
+## Cấu trúc Dự án
 
 ```
 ToDoListApp/
@@ -51,24 +51,24 @@ ToDoListApp/
 └── package.json
 ```
 
-## Installation & Setup
+## Cài đặt & Thiết lập
 
-### Prerequisites
+### Điều kiện tiên quyết
 
-- Node.js (v14 or higher)
-- MongoDB Atlas account
+- Node.js (v14 trở lên)
+- Tài khoản MongoDB Atlas
 - Git
 
-### 1. Clone the repository
+### 1. Sao chép kho lưu trữ
 
 ```bash
 git clone <repository-url>
 cd ToDoListApp
 ```
 
-### 2. Environment Variables
+### 2. Biến môi trường
 
-Create a `.env` file in the root directory:
+Tạo một tệp `.env` trong thư mục gốc:
 
 ```env
 MONGO_URI=your_mongodb_connection_string
@@ -76,124 +76,124 @@ NODE_ENV=development
 PORT=5000
 ```
 
-### 3. Install Dependencies
+### 3. Cài đặt các phụ thuộc
 
 ```bash
-# Install root dependencies
+# Cài đặt các phụ thuộc ở gốc
 npm install
 
-# Install frontend dependencies
+# Cài đặt các phụ thuộc của frontend
 cd frontend
 npm install
 cd ..
 ```
 
-### 4. Development Mode
+### 4. Chế độ phát triển
 
 ```bash
-# Start backend server (runs on port 5000)
+# Khởi động máy chủ backend (chạy trên cổng 5000)
 npm run dev
 
-# In another terminal, start frontend (runs on port 5173)
+# Trong một terminal khác, khởi động frontend (chạy trên cổng 5173)
 cd frontend
 npm run dev
 ```
 
-## API Endpoints
+## Các điểm cuối API
 
-| Method | Endpoint         | Description                              |
-| ------ | ---------------- | ---------------------------------------- |
-| GET    | `/api/todos`     | Get all todos                            |
-| POST   | `/api/todos`     | Create a new todo                        |
-| PATCH  | `/api/todos/:id` | Update a todo (text or completed status) |
-| DELETE | `/api/todos/:id` | Delete a todo                            |
+| Phương thức | Điểm cuối        | Mô tả                                                       |
+| ----------- | ---------------- | ----------------------------------------------------------- |
+| GET         | `/api/todos`     | Lấy tất cả các công việc                                    |
+| POST        | `/api/todos`     | Tạo một công việc mới                                       |
+| PATCH       | `/api/todos/:id` | Cập nhật một công việc (văn bản hoặc trạng thái hoàn thành) |
+| DELETE      | `/api/todos/:id` | Xóa một công việc                                           |
 
-## Development Process
+## Quy trình Phát triển
 
-### Backend Setup (MERN Stack)
+### Thiết lập Backend (MERN Stack)
 
-1. **Project Initialization**: Created separate backend and frontend directories with `npm init -y`
-2. **Server Setup**:
-   - Created `server.js` with Express framework
-   - Installed dependencies: express, mongoose, cors, dotenv
-   - Configured ES6 modules with `"type": "module"`
-   - Set up server on port 5000
-3. **Development Optimization**: Added nodemon for auto-restart during development
-4. **MongoDB Connection**:
-   - Set up MongoDB Atlas cluster
-   - Created database connection in `config/db.js`
-   - Configured environment variables
+1.  **Khởi tạo Dự án**: Tạo các thư mục backend và frontend riêng biệt bằng `npm init -y`
+2.  **Thiết lập Máy chủ**:
+    - Tạo `server.js` với framework Express
+    - Cài đặt các phụ thuộc: express, mongoose, cors, dotenv
+    - Cấu hình các mô-đun ES6 với `"type": "module"`
+    - Thiết lập máy chủ trên cổng 5000
+3.  **Tối ưu hóa Phát triển**: Thêm nodemon để tự động khởi động lại trong quá trình phát triển
+4.  **Kết nối MongoDB**:
+    - Thiết lập cụm MongoDB Atlas
+    - Tạo kết nối cơ sở dữ liệu trong `config/db.js`
+    - Cấu hình các biến môi trường
 
-### Backend Logic Development
+### Phát triển Logic Backend
 
-1. **Todo Schema**: Defined MongoDB schema with text (required) and completed (default: false) fields
-2. **CRUD Routes**: Implemented full CRUD operations in `routes/todo.route.js`
-   - GET `/api/todos` - Fetch all todos
-   - POST `/api/todos` - Create new todo
-   - PATCH `/api/todos/:id` - Update todo
-   - DELETE `/api/todos/:id` - Delete todo
+1.  **Lược đồ Todo**: Định nghĩa lược đồ MongoDB với các trường văn bản (bắt buộc) và đã hoàn thành (mặc định: false)
+2.  **Các tuyến đường CRUD**: Triển khai các hoạt động CRUD đầy đủ trong `routes/todo.route.js`
+    - GET `/api/todos` - Lấy tất cả các công việc
+    - POST `/api/todos` - Tạo công việc mới
+    - PATCH `/api/todos/:id` - Cập nhật công việc
+    - DELETE `/api/todos/:id` - Xóa công việc
 
-### Frontend Development
+### Phát triển Frontend
 
-1. **React Setup**: Created Vite React project with JavaScript
-2. **Material-UI Integration**: Added MUI components for modern UI design
-3. **User Interface**: Built responsive todo interface with:
-   - Add todo form with validation
-   - Todo list with inline editing
-   - Complete/incomplete toggle
-   - Delete functionality
-4. **Backend Integration**:
-   - Configured Vite proxy for API calls
-   - Implemented async functions for all CRUD operations
-   - Added real-time UI updates
+1.  **Thiết lập React**: Tạo dự án Vite React bằng JavaScript
+2.  **Tích hợp Material-UI**: Thêm các thành phần MUI cho thiết kế giao diện người dùng hiện đại
+3.  **Giao diện Người dùng**: Xây dựng giao diện công việc đáp ứng với:
+    - Biểu mẫu thêm công việc có xác thực
+    - Danh sách công việc với chỉnh sửa nội tuyến
+    - Chuyển đổi hoàn thành/chưa hoàn thành
+    - Chức năng xóa
+4.  **Tích hợp Backend**:
+    - Cấu hình proxy Vite cho các lệnh gọi API
+    - Triển khai các hàm bất đồng bộ cho tất cả các hoạt động CRUD
+    - Thêm cập nhật giao diện người dùng thời gian thực
 
-### Key Features Implementation
+### Triển khai các Tính năng Chính
 
-- **Add Todo**: Form submission with input validation
-- **Display Todos**: Real-time fetching and rendering
-- **Edit Todo**: Inline editing with save/cancel options
-- **Delete Todo**: Confirmation and UI update
-- **Toggle Complete**: Visual status changes with database sync
-- **Responsive Design**: Mobile-friendly interface
+- **Thêm Todo**: Gửi biểu mẫu với xác thực đầu vào
+- **Hiển thị Todos**: Lấy và kết xuất thời gian thực
+- **Chỉnh sửa Todo**: Chỉnh sửa nội tuyến với các tùy chọn lưu/hủy
+- **Xóa Todo**: Xác nhận và cập nhật giao diện người dùng
+- **Chuyển đổi Hoàn thành**: Thay đổi trạng thái trực quan với đồng bộ hóa cơ sở dữ liệu
+- **Thiết kế Đáp ứng**: Giao diện thân thiện với thiết bị di động
 
-## Deployment
+## Triển khai
 
-### Production Build
+### Xây dựng Sản xuất
 
 ```bash
 npm run build
 ```
 
-### Start Production Server
+### Khởi động Máy chủ Sản xuất
 
 ```bash
 npm start
 ```
 
-### Deployment on Render.com
+### Triển khai trên Render.com
 
-1. Push code to GitHub repository
-2. Connect Render.com to GitHub repo
-3. Configure build and start commands:
-   - Build Command: `npm run build`
-   - Start Command: `npm start`
-4. Set environment variables (MONGO_URI, NODE_ENV=production)
-5. Configure MongoDB Atlas network access for deployment
+1.  Đẩy mã lên kho lưu trữ GitHub
+2.  Kết nối Render.com với kho lưu trữ GitHub
+3.  Cấu hình các lệnh xây dựng và khởi động:
+    - Lệnh Xây dựng: `npm run build`
+    - Lệnh Khởi động: `npm start`
+4.  Đặt các biến môi trường (MONGO_URI, NODE_ENV=production)
+5.  Cấu hình quyền truy cập mạng MongoDB Atlas để triển khai
 
-## Scripts
+## Các tập lệnh
 
-- `npm run dev` - Start development server with nodemon
-- `npm run build` - Build frontend for production
-- `npm start` - Start production server
+- `npm run dev` - Khởi động máy chủ phát triển với nodemon
+- `npm run build` - Xây dựng frontend cho môi trường sản xuất
+- `npm start` - Khởi động máy chủ sản xuất
 
-## Contributing
+## Đóng góp
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
+1.  Fork kho lưu trữ
+2.  Tạo một nhánh tính năng
+3.  Cam kết các thay đổi của bạn
+4.  Đẩy lên nhánh
+5.  Mở một Pull Request
 
-## License
+## Giấy phép
 
-This project is licensed under the ISC License.
+Dự án này được cấp phép theo Giấy phép ISC.

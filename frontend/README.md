@@ -1,73 +1,73 @@
-# Frontend - React Todo Application
+# Frontend - Ứng dụng React Todo
 
-This is the frontend part of the MERN Stack Todo List Application, built with React, Vite, and Material-UI.
+Đây là phần frontend của Ứng dụng Danh sách Công việc MERN Stack, được xây dựng bằng React, Vite và Material-UI.
 
 ## Tech Stack
 
-- **React 19** - JavaScript library for building user interfaces
-- **Vite** - Fast build tool and development server
-- **Material-UI (MUI)** - React component library for modern UI design
-- **Axios** - HTTP client for API requests
-- **React Icons** - Icon library for React applications
+- **React 19** - Thư viện JavaScript để xây dựng giao diện người dùng
+- **Vite** - Công cụ xây dựng và máy chủ phát triển nhanh
+- **Material-UI (MUI)** - Thư viện thành phần React cho thiết kế giao diện người dùng hiện đại
+- **Axios** - Trình khách HTTP cho các yêu cầu API
+- **React Icons** - Thư viện biểu tượng cho các ứng dụng React
 
-## Features
+## Tính năng
 
-- ✅ Modern React with hooks (useState, useEffect)
-- ✅ Material-UI components for professional design
-- ✅ Real-time todo management (CRUD operations)
-- ✅ Inline editing functionality
-- ✅ Responsive design
-- ✅ Hot Module Replacement (HMR) for fast development
-- ✅ ESLint configuration for code quality
+- ✅ React hiện đại với hooks (useState, useEffect)
+- ✅ Các thành phần Material-UI cho thiết kế chuyên nghiệp
+- ✅ Quản lý công việc thời gian thực (hoạt động CRUD)
+- ✅ Chức năng chỉnh sửa nội tuyến
+- ✅ Thiết kế đáp ứng
+- ✅ Thay thế Mô-đun Nóng (HMR) để phát triển nhanh
+- ✅ Cấu hình ESLint để đảm bảo chất lượng mã
 
-## Project Structure
+## Cấu trúc Dự án
 
 ```
 frontend/
 ├── public/
 │   └── vite.svg
 ├── src/
-│   ├── App.jsx          # Main application component
-│   ├── main.jsx         # Application entry point
-│   └── index.css        # Global styles
-├── index.html           # HTML template
-├── package.json         # Dependencies and scripts
-├── vite.config.js       # Vite configuration
-└── README.md           # This file
+│   ├── App.jsx          # Thành phần ứng dụng chính
+│   ├── main.jsx         # Điểm vào ứng dụng
+│   └── index.css        # Kiểu dáng toàn cục
+├── index.html           # Mẫu HTML
+├── package.json         # Các phụ thuộc và tập lệnh
+├── vite.config.js       # Cấu hình Vite
+└── README.md           # Tệp này
 ```
 
-## Available Scripts
+## Các tập lệnh có sẵn
 
-- `npm run dev` - Start development server (http://localhost:5173)
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint for code quality checks
+- `npm run dev` - Khởi động máy chủ phát triển (http://localhost:5173)
+- `npm run build` - Xây dựng cho môi trường sản xuất
+- `npm run preview` - Xem trước bản dựng sản xuất cục bộ
+- `npm run lint` - Chạy ESLint để kiểm tra chất lượng mã
 
-## Development Setup
+## Thiết lập Phát triển
 
-### Prerequisites
+### Điều kiện tiên quyết
 
-- Node.js (v14 or higher)
-- npm or yarn package manager
+- Node.js (v14 trở lên)
+- Trình quản lý gói npm hoặc yarn
 
-### Installation
+### Cài đặt
 
 ```bash
-# Navigate to frontend directory
+# Điều hướng đến thư mục frontend
 cd frontend
 
-# Install dependencies
+# Cài đặt các phụ thuộc
 npm install
 
-# Start development server
+# Khởi động máy chủ phát triển
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173`
+Ứng dụng sẽ có sẵn tại `http://localhost:5173`
 
-## API Integration
+## Tích hợp API
 
-The frontend communicates with the backend API through Axios. The Vite proxy configuration automatically forwards API requests to the backend server:
+Frontend giao tiếp với API backend thông qua Axios. Cấu hình proxy của Vite tự động chuyển tiếp các yêu cầu API đến máy chủ backend:
 
 ```javascript
 // vite.config.js
@@ -80,140 +80,140 @@ server: {
 }
 ```
 
-### API Endpoints Used
+### Các điểm cuối API được sử dụng
 
-- `GET /api/todos` - Fetch all todos
-- `POST /api/todos` - Create new todo
-- `PATCH /api/todos/:id` - Update todo
-- `DELETE /api/todos/:id` - Delete todo
+- `GET /api/todos` - Lấy tất cả các công việc
+- `POST /api/todos` - Tạo công việc mới
+- `PATCH /api/todos/:id` - Cập nhật công việc
+- `DELETE /api/todos/:id` - Xóa công việc
 
-## Component Architecture
+## Kiến trúc Thành phần
 
 ### App.jsx
 
-Main application component that handles:
+Thành phần ứng dụng chính xử lý:
 
-- State management for todos and editing
-- CRUD operations with backend API
-- User interface rendering with Material-UI components
+- Quản lý trạng thái cho các công việc và chỉnh sửa
+- Các hoạt động CRUD với API backend
+- Kết xuất giao diện người dùng với các thành phần Material-UI
 
-### Key State Variables
+### Các biến trạng thái chính
 
-- `newTodo` - Input value for new todo
-- `todos` - Array of all todos
-- `editingTodo` - ID of currently editing todo
-- `editedText` - Text value during editing
+- `newTodo` - Giá trị đầu vào cho công việc mới
+- `todos` - Mảng chứa tất cả các công việc
+- `editingTodo` - ID của công việc đang được chỉnh sửa
+- `editedText` - Giá trị văn bản trong quá trình chỉnh sửa
 
-### Key Functions
+### Các hàm chính
 
-- `addTodo()` - Add new todo to database
-- `fetchTodos()` - Retrieve all todos from database
-- `startEditing()` - Enter edit mode for a todo
-- `saveEdit()` - Save edited todo to database
-- `cancelEdit()` - Cancel editing without saving
-- `deleteTodo()` - Remove todo from database
-- `toggleTodo()` - Toggle completion status
+- `addTodo()` - Thêm công việc mới vào cơ sở dữ liệu
+- `fetchTodos()` - Lấy tất cả các công việc từ cơ sở dữ liệu
+- `startEditing()` - Chuyển sang chế độ chỉnh sửa cho một công việc
+- `saveEdit()` - Lưu công việc đã chỉnh sửa vào cơ sở dữ liệu
+- `cancelEdit()` - Hủy chỉnh sửa mà không lưu
+- `deleteTodo()` - Xóa công việc khỏi cơ sở dữ liệu
+- `toggleTodo()` - Chuyển đổi trạng thái hoàn thành
 
-## Material-UI Components Used
+## Các thành phần Material-UI được sử dụng
 
-- `Container` - Layout container with responsive breakpoints
-- `Paper` - Elevated surface for content
-- `Typography` - Text styling and hierarchy
-- `TextField` - Input field for todo text
-- `Button` - Action buttons with icons
-- `List` & `ListItem` - Todo list display
-- `Checkbox` - Toggle completion status
-- `IconButton` - Icon-based action buttons
-- `Box` - Layout and spacing utility
+- `Container` - Vùng chứa bố cục với các điểm ngắt đáp ứng
+- `Paper` - Bề mặt nổi để chứa nội dung
+- `Typography` - Kiểu dáng và phân cấp văn bản
+- `TextField` - Trường nhập liệu cho văn bản công việc
+- `Button` - Các nút hành động có biểu tượng
+- `List` & `ListItem` - Hiển thị danh sách công việc
+- `Checkbox` - Chuyển đổi trạng thái hoàn thành
+- `IconButton` - Các nút hành động dựa trên biểu tượng
+- `Box` - Tiện ích bố cục và khoảng cách
 
-## Icons Used
+## Các biểu tượng được sử dụng
 
-- `Add` - Add new todo
-- `Edit` - Edit existing todo
-- `Delete` - Delete todo
-- `Save` - Save changes
-- `Cancel` - Cancel editing
-- `CheckCircle` - Completed todo indicator
-- `RadioButtonUnchecked` - Incomplete todo indicator
+- `Add` - Thêm công việc mới
+- `Edit` - Chỉnh sửa công việc hiện có
+- `Delete` - Xóa công việc
+- `Save` - Lưu thay đổi
+- `Cancel` - Hủy chỉnh sửa
+- `CheckCircle` - Chỉ báo công việc đã hoàn thành
+- `RadioButtonUnchecked` - Chỉ báo công việc chưa hoàn thành
 
-## Styling Approach
+## Phương pháp tạo kiểu
 
-The application uses Material-UI's `sx` prop for styling, providing:
+Ứng dụng sử dụng prop `sx` của Material-UI để tạo kiểu, cung cấp:
 
-- Consistent design system
-- Responsive breakpoints
-- Theme-based colors and spacing
-- Hover and focus states
-- Accessibility features
+- Hệ thống thiết kế nhất quán
+- Các điểm ngắt đáp ứng
+- Màu sắc và khoảng cách dựa trên chủ đề
+- Các trạng thái khi di chuột và tập trung
+- Các tính năng trợ năng
 
-## Build and Deployment
+## Xây dựng và Triển khai
 
-### Development Build
+### Xây dựng phát triển
 
 ```bash
 npm run dev
 ```
 
-### Production Build
+### Xây dựng sản xuất
 
 ```bash
 npm run build
 ```
 
-The build output will be in the `dist/` directory, ready for deployment.
+Đầu ra của bản dựng sẽ nằm trong thư mục `dist/`, sẵn sàng để triển khai.
 
-### Preview Production Build
+### Xem trước bản dựng sản xuất
 
 ```bash
 npm run preview
 ```
 
-## ESLint Configuration
+## Cấu hình ESLint
 
-The project includes ESLint configuration for:
+Dự án bao gồm cấu hình ESLint cho:
 
-- React best practices
-- React Hooks rules
-- Code quality and consistency
-- Modern JavaScript standards
+- Các phương pháp hay nhất của React
+- Các quy tắc của React Hooks
+- Chất lượng và tính nhất quán của mã
+- Các tiêu chuẩn JavaScript hiện đại
 
-## Browser Support
+## Hỗ trợ Trình duyệt
 
-- Modern browsers with ES6+ support
-- Native ES Modules support
-- Chrome, Firefox, Safari, Edge (latest versions)
+- Các trình duyệt hiện đại hỗ trợ ES6+
+- Hỗ trợ Mô-đun ES gốc
+- Chrome, Firefox, Safari, Edge (các phiên bản mới nhất)
 
-## Contributing
+## Đóng góp
 
-1. Follow React best practices
-2. Use Material-UI components consistently
-3. Maintain responsive design principles
-4. Write clean, readable code
-5. Test all CRUD operations before committing
+1. Tuân thủ các phương pháp hay nhất của React
+2. Sử dụng các thành phần Material-UI một cách nhất quán
+3. Duy trì các nguyên tắc thiết kế đáp ứng
+4. Viết mã sạch, dễ đọc
+5. Kiểm tra tất cả các hoạt động CRUD trước khi cam kết
 
-## Troubleshooting
+## Khắc phục sự cố
 
-### Common Issues
+### Các vấn đề thường gặp
 
-1. **API Connection Issues**
+1. **Sự cố kết nối API**
 
-   - Ensure backend server is running on port 5000
-   - Check proxy configuration in `vite.config.js`
+   - Đảm bảo máy chủ backend đang chạy trên cổng 5000
+   - Kiểm tra cấu hình proxy trong `vite.config.js`
 
-2. **Build Errors**
+2. **Lỗi xây dựng**
 
-   - Clear node_modules and reinstall: `rm -rf node_modules && npm install`
-   - Check for version conflicts in package.json
+   - Xóa node_modules và cài đặt lại: `rm -rf node_modules && npm install`
+   - Kiểm tra xung đột phiên bản trong package.json
 
-3. **Hot Reload Not Working**
-   - Restart development server
-   - Check file permissions and paths
+3. **Tải lại nóng không hoạt động**
+   - Khởi động lại máy chủ phát triển
+   - Kiểm tra quyền và đường dẫn tệp
 
-## Future Enhancements
+## Các cải tiến trong tương lai
 
-- [ ] Add todo categories/tags
-- [ ] Implement drag-and-drop reordering
-- [ ] Add due dates and reminders
-- [ ] Dark/light theme toggle
-- [ ] Offline support with service workers
-- [ ] Unit and integration tests
+- [ ] Thêm danh mục/thẻ cho công việc
+- [ ] Triển khai sắp xếp lại bằng cách kéo và thả
+- [ ] Thêm ngày hết hạn và lời nhắc
+- [ ] Chuyển đổi chủ đề sáng/tối
+- [ ] Hỗ trợ ngoại tuyến với service workers
+- [ ] Kiểm thử đơn vị và tích hợp
